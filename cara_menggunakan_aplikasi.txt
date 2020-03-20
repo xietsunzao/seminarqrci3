@@ -1,0 +1,7 @@
+database : seminar
+
+user login
+
+email : admin@admin.com
+password : password
+

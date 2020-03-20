@@ -1,0 +1,5 @@
+;(function(window){'use strict';var openCtrl=document.getElementById('btn-search'),closeCtrl=document.getElementById('btn-search-close'),searchContainer=document.querySelector('.search'),inputSearch=searchContainer.querySelector('.search__input'),lastFocusedElement;function init(){initEvents();}
+function initEvents(){openCtrl.addEventListener('click',openSearch);closeCtrl.addEventListener('click',closeSearch);document.addEventListener('keyup',function(ev){if(ev.keyCode==27){closeSearch();}});}
+function openSearch(){lastFocusedElement=document.activeElement;searchContainer.classList.add('search--open');inputSearch.focus();}
+function closeSearch(){searchContainer.classList.remove('search--open');inputSearch.blur();inputSearch.value='';if(lastFocusedElement){lastFocusedElement.focus();}}
+init();})(window);
